@@ -420,6 +420,9 @@
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexShakeB.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/VertexZoom.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/WarpTextExample.cs"
+"Assets/ToneMapping.cs"
+"Assets/Tutorial/Prefabs/TriForge Assets/Fantasy Forest Environment/Scripts/TexturePan.cs"
+"Assets/Tutorial/Prefabs/TriForge Assets/Fantasy Forest Environment/Scripts/TF_FFE_WindController.cs"
 -langversion:9.0
 
 /deterministic
