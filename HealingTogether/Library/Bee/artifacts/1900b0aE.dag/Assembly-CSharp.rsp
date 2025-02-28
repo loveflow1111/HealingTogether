@@ -423,6 +423,8 @@
 "Assets/ToneMapping.cs"
 "Assets/Tutorial/Prefabs/TriForge Assets/Fantasy Forest Environment/Scripts/TexturePan.cs"
 "Assets/Tutorial/Prefabs/TriForge Assets/Fantasy Forest Environment/Scripts/TF_FFE_WindController.cs"
+"Assets/Tutorial/Scripts/Mob/Mob.cs"
+"Assets/Tutorial/Scripts/Mob/Spawner.cs"
 -langversion:9.0
 
 /deterministic

@@ -1,6 +1,5 @@
 sceneSetups:
-- path: Assets/Tutorial/Prefabs/TriForge Assets/Fantasy Forest Environment/Scenes/Built-in
-    Renderer/DemoScene_Autumn.unity
+- path: Assets/Tutorial/Scenes/Tutorial_Healing_Autumn.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
