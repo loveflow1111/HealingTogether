@@ -1,30 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class Mob : MonoBehaviour
 {
 
+
     public float destroyDelay = 1f;
+    public UnityEvent OnCreated;
+    public UnityEvent OnDestroyed;
+
+
+
     private bool isDestroyed = false;
-    private NavMeshAgent agent;
 
-    public ParticleSystem destroyParticle;
-    public AudioSource destroyAudio;
-    public GameObject modelGameObject;
 
-    private void Awake()
-    {
-        agent = GetComponent<NavMeshAgent>();
-    }
 
     private void Start()
     {
-        agent.SetDestination(new Vector3(0f, 2f, 1f));
-        agent.speed *= Random.Range(0.8f, 1.5f);
+
 
         Invoke(nameof(Destroy), 3f); // 생성 후 3초 후에 자폭
+
+        OnCreated?.Invoke();
     }
 
     public void Destroy()
@@ -35,14 +33,10 @@ public class Mob : MonoBehaviour
 
         isDestroyed = true;
 
-        destroyParticle.Play();
-        destroyAudio.Play();
 
-        //environmentParticle.Stop();
-        agent.enabled = false;
-        modelGameObject.SetActive(false);
+        Destroy(gameObject, destroyDelay);
 
-        Destroy(modelGameObject, destroyDelay);
+        OnDestroyed?.Invoke();
 
     }
 }
